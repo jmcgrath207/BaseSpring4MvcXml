@@ -1,0 +1,9 @@
+
+
+Fix issue were offersdoa is not injected in the service object
+
+
+    @Resource(name="offersDao")
+    public void setOffersDao(OffersDao offersDao) {
+        this.offersDao = offersDao;
+    }

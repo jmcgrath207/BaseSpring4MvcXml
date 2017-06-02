@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file:///opt/tomcat/webapps/examples/WEB-INF/WEB-INF.iml" filepath="/opt/tomcat/webapps/examples/WEB-INF/WEB-INF.iml" />
       <module fileurl="file://$PROJECT_DIR$/basespringmvc.iml" filepath="$PROJECT_DIR$/basespringmvc.iml" />
+      <module fileurl="file:///opt/tomcat/conf/conf.iml" filepath="/opt/tomcat/conf/conf.iml" />
+      <module fileurl="file:///opt/tomcat/webapps/examples/WEB-INF/jsp/jsp.iml" filepath="/opt/tomcat/webapps/examples/WEB-INF/jsp/jsp.iml" />
+      <module fileurl="file:///opt/tomcat/work/Catalina/localhost/localhost.iml" filepath="/opt/tomcat/work/Catalina/localhost/localhost.iml" />
+      <module fileurl="file:///opt/tomcat/webapps/examples/jsp/plugin/plugin.iml" filepath="/opt/tomcat/webapps/examples/jsp/plugin/plugin.iml" />
+      <module fileurl="file:///opt/tomcat/webapps/docs/appdev/sample/sample.iml" filepath="/opt/tomcat/webapps/docs/appdev/sample/sample.iml" />
     </modules>
   </component>
 </project>
