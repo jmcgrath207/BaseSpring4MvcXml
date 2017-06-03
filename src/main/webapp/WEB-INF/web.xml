@@ -14,7 +14,7 @@ based on the recommendations of the Application Developer’s Guide.
 
 <context-param>
 <param-name>contextConfigLocation</param-name>
-<param-value>/WEB-INF/offers-servlet.xml,/WEB-INF/dao-context.xml,/WEB-INF/offers-servlet.xml</param-value>
+<param-value>/WEB-INF/offers-servlet.xml,/WEB-INF/dao-context.xml,/WEB-INF/service-context.xml</param-value>
 </context-param>
 
 

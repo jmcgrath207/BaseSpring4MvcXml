@@ -6,6 +6,7 @@ import dao.OffersDao;
 import dao.Offers;
 
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

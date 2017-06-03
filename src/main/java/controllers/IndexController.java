@@ -1,12 +1,13 @@
 package controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
 import service.OffersService;
 import dao.Offers;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 
@@ -17,10 +18,11 @@ import java.util.List;
 @Controller
 public class IndexController {
 
+
     private OffersService offersService;
 
 
-    @Autowired
+    @Resource(name="offersService")
     public void setOffersService(OffersService offersService) {
         this.offersService = offersService;
     }
@@ -30,7 +32,7 @@ public class IndexController {
 
         List<Offers> offers = offersService.getCurrent();
 
-        m.addAttribute("offers", "offers");
+        m.addAttribute("offers", offers);
         return "index";
     }
 }

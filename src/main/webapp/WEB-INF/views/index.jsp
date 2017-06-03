@@ -30,15 +30,18 @@
 
 </c:forEach>
 
+
+
+
+
+
 --%>
 
 <c:forEach var="row" items="${offers}">
     id ${row.id}<br/>
     name ${row.name}<br/>
     email ${row.email}<br/>
-
 </c:forEach>
-
 
 </body>
 </html>
