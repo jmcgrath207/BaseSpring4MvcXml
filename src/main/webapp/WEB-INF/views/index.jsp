@@ -30,18 +30,22 @@
 
 </c:forEach>
 
-
-
-
-
-
---%>
+iterate a list of objects from the m.addtribute
 
 <c:forEach var="row" items="${offers}">
     id ${row.id}<br/>
     name ${row.name}<br/>
     email ${row.email}<br/>
 </c:forEach>
+
+
+
+--%>
+
+<p><a href="${pageContext.request.contextPath}/offers">Show current offers</a> </p>
+
+
+<p><a href="${pageContext.request.contextPath}/createoffers">Add new offer</a> </p>
 
 </body>
 </html>

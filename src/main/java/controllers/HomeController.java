@@ -1,22 +1,20 @@
 package controllers;
 
-
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.ui.Model;
-import service.OffersService;
 import dao.Offers;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import service.OffersService;
 
 import javax.annotation.Resource;
 import java.util.List;
 
-
 /**
- * Created by root on 5/23/17.
+ * Created by root on 6/3/17.
  */
 
-@Controller("indexController")
-public class IndexController {
+@Controller("homeController")
+public class HomeController {
 
 
     private OffersService offersService;
@@ -27,12 +25,21 @@ public class IndexController {
         this.offersService = offersService;
     }
 
-    @GetMapping("/")
-    public String index(Model m) {
+    @GetMapping("/offers")
+    public String showOffers(Model m) {
 
         List<Offers> offers = offersService.getCurrent();
 
         m.addAttribute("offers", offers);
-        return "index";
+        return "offers";
     }
+
+    @GetMapping("/createoffers")
+    public String createOffer(Model m) {
+
+
+        return "create";
+    }
+
+
 }
