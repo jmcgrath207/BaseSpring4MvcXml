@@ -8,9 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Title</title>
-</head>
+<link href="${pageContext.request.contextPath}/static/css/main.css" rel="stylesheet" type="text/css" />
 <body>
     <form method="post" action="${pageContext.request.contextPath}/docreate">
 
