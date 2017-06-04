@@ -1,10 +1,14 @@
 package dao;
 
+import javax.validation.constraints.Size;
+
 /**
  * Created by root on 5/30/17.
  */
 public class Offers {
     private int id;
+
+    @Size(min=5,max=100)
     private String name;
     private String email;
     private String text;
