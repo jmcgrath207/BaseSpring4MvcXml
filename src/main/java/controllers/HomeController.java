@@ -25,21 +25,7 @@ public class HomeController {
         this.offersService = offersService;
     }
 
-    @GetMapping("/offers")
-    public String showOffers(Model m) {
 
-        List<Offers> offers = offersService.getCurrent();
-
-        m.addAttribute("offers", offers);
-        return "offers";
-    }
-
-    @GetMapping("/createoffers")
-    public String createOffer(Model m) {
-
-
-        return "create";
-    }
 
 
 }

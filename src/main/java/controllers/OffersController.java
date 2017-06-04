@@ -3,6 +3,7 @@ package controllers;
 import dao.Offers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,4 +34,28 @@ public class OffersController {
 
 
     }
+
+    @GetMapping("/offers")
+    public String showOffers(Model m) {
+
+        List<Offers> offers = offersService.getCurrent();
+
+        m.addAttribute("offers", offers);
+        return "offers";
+    }
+
+    @GetMapping("/createoffers")
+    public String createOffer() {
+
+
+        return "createoffer";
+    }
+
+
+    @RequestMapping("/docreate")
+    public String doCreate(Model model, Offers offer) {
+        System.out.println(offer);
+        return "offercreated";
+    }
+
 }
