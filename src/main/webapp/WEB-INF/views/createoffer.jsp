@@ -1,4 +1,5 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--
   Created by IntelliJ IDEA.
   User: root
@@ -6,19 +7,19 @@
   Time: 12:31 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <link href="${pageContext.request.contextPath}/static/css/main.css" rel="stylesheet" type="text/css" />
 <body>
-    <form method="post" action="${pageContext.request.contextPath}/docreate">
+    <sf:form method="post" action="${pageContext.request.contextPath}/docreate" commandName="offer" >
 
-<table>
-    <tr><td>Name: </td><td><input name= "name" type="text" /></td></tr>
-    <tr><td>Email: </td><td><input name= "email" type="text" /></td></tr>
-    <tr><td>Offer: </td><td><textarea name="text" rows="10" cols="10"></textarea></td></tr>
-    <tr><td> </td><td><input value= "Create advert" type="submit" /></td></tr>
+<table class="formtable">
+    <tr><td class="label">Name: </td><td><sf:input class = "control" name= "name" type="text" path="name" /></td></tr>
+    <tr><td class="label">Email: </td><td><sf:input class = "control" name= "email" type="text" path="email"/></td></tr>
+    <tr><td class="label">Offer: </td><td><sf:textarea class = "control" name="text" rows="10" cols="10" path="text" /></td></tr>
+    <tr><td class="label"> </td><td><input class = "control" value= "Create advert" type="submit" /></td></tr>
 </table>
 
-    </form>
+    </sf:form>
 </body>
 </html>

@@ -48,8 +48,9 @@ public class OffersController {
     }
 
     @GetMapping("/createoffers")
-    public String createOffer() {
+    public String createOffer(Model model) {
 
+        model.addAttribute("offer",new Offers());
 
         return "createoffer";
     }
@@ -66,9 +67,8 @@ public class OffersController {
             for(ObjectError error: errors) {
                 System.out.println(error.getDefaultMessage());
             }
-        }
-        else {
-            System.out.println("Form validated.");
+            model.addAttribute("offer",new Offers());
+            return "createoffer";
         }
 
         System.out.println(offer);
