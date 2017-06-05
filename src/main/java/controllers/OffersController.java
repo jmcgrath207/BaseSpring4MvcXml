@@ -74,6 +74,8 @@ public class OffersController {
 
         }
 
+        offersService.create(offer);
+
 
         System.out.println(offer);
         return "offercreated";

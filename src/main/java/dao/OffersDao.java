@@ -55,6 +55,8 @@ public class OffersDao {
     }
 
     public boolean create(Offers offers) {
+        // used the offers object as a template then inserts it into the database
+
 
         BeanPropertySqlParameterSource params = new BeanPropertySqlParameterSource(offers);
 

@@ -1,9 +1,9 @@
 package dao;
 
 import org.springframework.stereotype.Component;
+import vaildation.ValidEmail;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
@@ -18,7 +18,8 @@ public class Offers {
     private String name;
 
     @NotNull
-    @Pattern(regexp =".*\\@.*\\..*",message="This does not appear to be a vaild email address")
+    //@Pattern(regexp =".*\\@.*\\..*",message="This does not appear to be a vaild email address")
+    @ValidEmail(min = 6)
     private String email;
 
     @Size(min=20,max=255, message="Text must be between 20 and 255 characters")

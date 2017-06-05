@@ -10,11 +10,21 @@
 </head>
 <body>
 
+<table class="offers">
+    <tr><td>Name</td><td>Email</td><td>Offer</td></tr>
 
-<c:forEach var="offer" items="${offers}">
-    <p><c:out value="${offer}"></c:out></p>
+    <c:forEach var="offer" items="${offers}">
+        <tr>
 
-</c:forEach>
+            <td><c:out value="${offer.name}"></c:out></td>
+
+            <td><c:out value="${offer.email}"></c:out></td>
+
+            <td><c:out value="${offer.text}"></c:out></td>
+
+        </tr>
+    </c:forEach>
+</table>
 
 </body>
 </html>
