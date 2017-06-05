@@ -5,10 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import service.OffersService;
 
 import javax.annotation.Resource;
@@ -56,11 +53,10 @@ public class OffersController {
     }
 
 
-    @RequestMapping("/docreate")
-    public String doCreate(Model model, @Valid Offers offer, BindingResult result) {
+    @RequestMapping(value = "/docreate", method=RequestMethod.POST)
+    public String doCreate(@ModelAttribute("offer") @Valid Offers offer, BindingResult result) {
 
-        if(result.hasErrors()) {
-            System.out.println("Form does not validate");
+        /* if(result.hasErrors()) {
 
             List<ObjectError> errors = result.getAllErrors();
 
@@ -70,6 +66,14 @@ public class OffersController {
             model.addAttribute("offer",new Offers());
             return "createoffer";
         }
+
+        */
+
+        if(result.hasErrors()) {
+            return "createoffer";
+
+        }
+
 
         System.out.println(offer);
         return "offercreated";
