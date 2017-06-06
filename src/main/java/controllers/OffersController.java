@@ -1,6 +1,7 @@
 package controllers;
 
 import dao.Offers;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -38,11 +39,19 @@ public class OffersController {
     @GetMapping("/offers")
     public String showOffers(Model m) {
 
+        offersService.throwTestException();
+
         List<Offers> offers = offersService.getCurrent();
 
         m.addAttribute("offers", offers);
         return "offers";
     }
+
+    /* @ExceptionHandler(DataAccessException.class)
+    public String handleDatabaseExpection(DataAccessException ex) {
+        return "error";
+    }
+    */
 
     @GetMapping("/createoffers")
     public String createOffer(Model model) {

@@ -33,4 +33,8 @@ public class OffersService {
     public void create(Offers offer) {
         offersDao.create(offer);
     }
+
+    public void throwTestException() {
+        offersDao.getOffer(9999999);
+    }
 }
