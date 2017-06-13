@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+    <security:authentication-manager>
+        <security:authentication-provider>
+
+            <security:user-service>
+                <security:user name="John" password="letmein" authorities="admin"></security:user>
+
+            </security:user-service>
+
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <security:http use-expressions="true">
+        <!--- works from top to bootom with uri pattern match -->
+        <security:intercept-url pattern="/createoffers" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/docreate" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/" access="permitAll"/>
+        <security:intercept-url pattern="/offers" access="permitAll"/>
+        <security:intercept-url pattern="/static/**" access="permitAll"/>
+        <security:intercept-url pattern="/**" access="denyAll"/>
+        <security:form-login />
+
+        
+    </security:http>
+
+
+
+
+
+
+</beans>

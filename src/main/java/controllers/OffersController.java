@@ -39,7 +39,7 @@ public class OffersController {
     @GetMapping("/offers")
     public String showOffers(Model m) {
 
-        offersService.throwTestException();
+
 
         List<Offers> offers = offersService.getCurrent();
 

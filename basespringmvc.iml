@@ -9,6 +9,7 @@
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/contexts/offers-servlet.xml</file>
           <file>file://$MODULE_DIR$/src/main/webapp/service-context.xml</file>
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/service-context.xml</file>
+          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/security-context.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -89,5 +90,9 @@
     <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.9.2" level="project" />
     <orderEntry type="library" name="Maven: commons-digester:commons-digester:1.8.1" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:4.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:4.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:4.2.3.RELEASE" level="project" />
   </component>
 </module>
